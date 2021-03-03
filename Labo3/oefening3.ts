@@ -8,4 +8,4 @@ const multiplyText = (amount: number, text: string, appendix?: string):string =>
     }
     else return result;
 }
-console.log(multiplyText(3, "flower", "!"));
+console.log(multiplyText(3, "flower ", "!"));

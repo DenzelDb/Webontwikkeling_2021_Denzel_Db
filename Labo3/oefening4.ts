@@ -1,17 +1,19 @@
 const chalk = require('chalk');
-enum color {
+enum Color {
     red,
     green,
     blue,
 }
-const multiplyTextColor = (amount: number, text: string, color: color, appendix?: string):string => {
+const multiplyTextColor = (amount: number, text: string = "Default", color: Color, appendix?: string):void => {
     let result: string = ""
     for (let i:number = 0; i < amount; i++){
         result += text + " ";
     }
     if(appendix){
-        return result + appendix;
+        result += appendix;
     }
-    else return result;
+    if(color == Color.red){
+        console.log(chalk.red(result));
+    }
 }
-console.log(multiplyText(3, "flower" + color.red +"!"));
+multiplyTextColor(3, "flower", Color.red, "!");
