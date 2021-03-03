@@ -1,9 +1,11 @@
-const multiplyText = (amount: number, text: string):string => {
+const multiplyText = (amount: number, text: string, appendix?: string):string => {
     let result: string = ""
     for (let i:number = 0; i < amount; i++){
-        result += text;
+        result += text + " ";
     }
-    return result;
+    if(appendix){
+        return result + appendix;
+    }
+    else return result;
 }
-//let result: string = multiplyText(3, "flower");
-console.log(multiplyText(3, "flower" + " "));
+console.log(multiplyText(3, "flower", "!"));
