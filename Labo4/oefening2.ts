@@ -47,9 +47,15 @@ const avgMetaScore = (movies : Array<Movie>) : number => {
     for (let i = 0; i < movies.length; i++){
         totalScore += movies[i].metascore;
     }
-    return totalScore / movies.length
+    return totalScore / movies.length;
 }
 
 console.log(avgMetaScore([thematrix, favoriteMovie, worstMovie]));
 
+const fakeMetaScore = (movie : Movie, newscore : number) : Movie => {
+    movie.metascore = newscore;
+    return movie;
+}
+
+console.log(fakeMetaScore(favoriteMovie, 100));
 
