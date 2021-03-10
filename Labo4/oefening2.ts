@@ -30,7 +30,17 @@ let worstMovie:Movie = {
     seen: true
 }
 
-const wasMovieMadeInThe90s = (movie:Movie):boolean => {
+interface wasMovieMadeInThe90s {
+    (movie:Movie):boolean
+}
+interface avgMetaScore {
+    (movies : Array<Movie>) : number
+}
+interface fakeMetaScore {
+    (movie : Movie, newscore : number) : Movie
+}
+
+const wasMovieMadeInThe90s : wasMovieMadeInThe90s = (movie) => {
     if(movie.year < 2000){
         return true;
     }
@@ -42,7 +52,7 @@ const wasMovieMadeInThe90s = (movie:Movie):boolean => {
 console.log(wasMovieMadeInThe90s(thematrix));
 console.log(wasMovieMadeInThe90s(favoriteMovie));
 
-const avgMetaScore = (movies : Array<Movie>) : number => {
+const avgMetaScore : avgMetaScore = (movies) => {
     let totalScore : number = 0;
     for (let i = 0; i < movies.length; i++){
         totalScore += movies[i].metascore;
@@ -52,10 +62,11 @@ const avgMetaScore = (movies : Array<Movie>) : number => {
 
 console.log(avgMetaScore([thematrix, favoriteMovie, worstMovie]));
 
-const fakeMetaScore = (movie : Movie, newscore : number) : Movie => {
+const fakeMetaScore : fakeMetaScore = (movie, newscore) => {
     movie.metascore = newscore;
     return movie;
 }
 
 console.log(fakeMetaScore(favoriteMovie, 100));
+
 
