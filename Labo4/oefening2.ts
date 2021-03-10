@@ -29,3 +29,27 @@ let worstMovie:Movie = {
     metascore: 38,
     seen: true
 }
+
+const wasMovieMadeInThe90s = (movie:Movie):boolean => {
+    if(movie.year < 2000){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+console.log(wasMovieMadeInThe90s(thematrix));
+console.log(wasMovieMadeInThe90s(favoriteMovie));
+
+const avgMetaScore = (movies : Array<Movie>) : number => {
+    let totalScore : number = 0;
+    for (let i = 0; i < movies.length; i++){
+        totalScore += movies[i].metascore;
+    }
+    return totalScore / movies.length
+}
+
+console.log(avgMetaScore([thematrix, favoriteMovie, worstMovie]));
+
+
