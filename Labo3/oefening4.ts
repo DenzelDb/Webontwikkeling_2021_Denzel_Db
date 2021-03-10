@@ -15,5 +15,8 @@ const multiplyTextColor = (amount: number, text: string = "Default", color: Colo
     if(color == Color.red){
         console.log(chalk.red(result));
     }
+    if(color == Color.green){
+        console.log(chalk.green(result));
+    }
 }
 multiplyTextColor(3, "flower", Color.red, "!");
