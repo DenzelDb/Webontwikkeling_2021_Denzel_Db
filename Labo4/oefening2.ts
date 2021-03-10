@@ -41,7 +41,7 @@ interface fakeMetaScore {
 }
 
 const wasMovieMadeInThe90s : wasMovieMadeInThe90s = (movie) => {
-    if(movie.year < 2000){
+    if(movie.year < 2000 && movie.year > 1989){
         return true;
     }
     else {
