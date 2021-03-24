@@ -6,3 +6,5 @@ names.forEach(name => capitalNames2.push(name.toUpperCase()))
 
 console.log(capitalNames1)
 console.log(capitalNames2)
+
+export{};
