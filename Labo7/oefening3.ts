@@ -8,7 +8,7 @@ const showAllDadJokes = async() => {
             }
          })
         let jokesJson = await jokes.json();
-        for (let d=0; d<5; d++){
+        for (let d=0; d<jokesJson.results.length; d++){
             console.log(jokesJson.results[d].joke)
         }
     }
