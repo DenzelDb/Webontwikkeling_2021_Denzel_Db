@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const ejs = require('ejs');
+const fetch = require('node-fetch');
 
 app.set('view engine', 'ejs');
 app.set('port', 3000);
@@ -11,7 +12,14 @@ const thisisme = {
     photo: 'https://i1.sndcdn.com/avatars-000898737085-id65d6-t500x500.jpg'
 }
 
+let pikachu = {
+    
+}
 
+fetch('https://pokeapi.co/api/v2/pokemon/pikachu').then((response:any) => response.json())
+.then((response:any) => {
+    pikachu = response
+})
 
 app.get('/',(req:any,res:any)=>{
     res.type('text/html');
@@ -32,12 +40,11 @@ app.get('/whoamijson',(req:any,res:any)=>{
 })
 
 app.get('/pikachujson',(req:any,res:any)=>{
-    res.type('text/html');
-    res.send('Hello <strong>World</strong>')
+    res.json(pikachu)
 })
 
 app.get('/pikachuhtml',(req:any,res:any)=>{
-    res.type('text/html');
-    res.send('Hello <strong>World</strong>')
+    res.render('pikachu', pikachu)
 })
 
+export{};
