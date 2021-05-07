@@ -23,7 +23,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/pikachu').then((response:any) => respon
 
 app.get('/',(req:any,res:any)=>{
     res.type('text/html');
-    res.send('Hello <strong>World</strong>')
+    res.render('Hello <strong>World</strong>')
 });
 
 app.listen(app.get('port'), 
