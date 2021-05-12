@@ -32,7 +32,7 @@ app.get('/movies',(req:any,res:any)=>{
 app.get('/movies/:index',(req:any,res:any)=>{
     let index = req.params.index;
     res.type('text/html');
-    res.render('movie', {movieName: movies[index].name, movieScore: movies[index].myScore})
+    res.render('movie', movies[index])
 });
 
 export{};
