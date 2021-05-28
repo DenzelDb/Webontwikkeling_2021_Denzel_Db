@@ -12,7 +12,7 @@ interface Movies{
     myScore: number,
     timesViewed: number
 }
-/*let movies: Movies[] = [
+let movies: Movies[] = [
     {name: "The Matrix", myScore: 90, timesViewed: 10},
     {name: "Pulp Fiction", myScore: 100, timesViewed: 100},
     {name: "Monster Hunter", myScore: 5, timesViewed:1},
@@ -20,7 +20,7 @@ interface Movies{
     {name: "Austin Powers", myScore: 80, timesViewed:10},
     {name: "Jurasic Park 2", myScore: 40, timesViewed:1},
     {name: "Ichi the Killer", myScore: 80, timesViewed:1}
-];*/
+];
 
 const main = async() => {
     try {

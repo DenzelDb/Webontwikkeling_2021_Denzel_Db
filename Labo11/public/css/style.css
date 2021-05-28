@@ -1,0 +1,110 @@
+body {
+    background-image: url(/img/background.png);
+    background-repeat: no-repeat;
+    background-color: #1a1919;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 4rem;
+    font-size: 25px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    align-items: stretch;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+}
+
+header>div {
+    display: flex;
+}
+
+.png1 {
+    margin-top: 32px;
+    width: auto;
+    height: 100px;
+}
+
+.png2 {
+    display: block;
+    width: auto;
+    height: 150px;
+    padding: 10px;
+    margin-left: auto;
+}
+
+.headerLink {
+    color: white;
+    margin: 58px 40px 75px 0 ;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.headerLink:hover {
+    color: orange;
+    transition: 200ms;
+}
+
+ul {
+    width: 450px;
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.table {
+    padding: 5rem;
+    font-size: 30px;
+}
+
+li {
+    margin: 20px;
+}
+
+.movies {
+    color: white;
+}
+
+.movies:hover {
+    color: orange;
+    transition: 200ms;
+}
+
+.click {
+    padding: 2rem 0 0 5rem ;
+    font-size: 30px;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.back {
+    font-size: 30px;
+    margin: 20px;
+    padding: 15px;
+    margin-left: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    background-color: orange;
+}

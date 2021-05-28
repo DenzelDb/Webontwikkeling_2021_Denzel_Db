@@ -1,0 +1,14 @@
+<%- include('header'); %>
+<p class="click">Click on a movie title to check out the score it got.</p>
+        <div class="table">
+            <ul>
+                <% for(let i = 0; i < allMovies.length; i++) { %>
+                    <li>
+                        <a href="/movies/<%= allMovies[i]._id %>" class="movies"><%= allMovies[i].name %></a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+        <a href="/" class="back">Back</a>
+    </body>
+</html>
