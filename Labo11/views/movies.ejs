@@ -4,11 +4,13 @@
             <ul>
                 <% for(let i = 0; i < allMovies.length; i++) { %>
                     <li>
-                        <a href="/movies/<%= allMovies[i]._id %>" class="movies"><%= allMovies[i].name %></a>
+                        <a href="/movies/<%= allMovies[i]._id %>" class="movies"><%= allMovies[i].name %></a><br>
+                        <a href="/removemovie/<%= allMovies[i]._id %>" class="delete">Delete movie</a>
                     </li>
                 <% } %>
             </ul>
         </div>
         <a href="/" class="back">Back</a>
+        <a href="/addmovie" class="add">Add movie</a>
     </body>
 </html>

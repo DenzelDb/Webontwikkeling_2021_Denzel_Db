@@ -1,0 +1,28 @@
+<%- include('header.ejs'); %>
+<% 
+    if(info !== undefined) {
+%>
+       <%= info %> <br>        
+<%
+    }
+%>
+
+<form action="/addmovie" method="POST">
+    <div>
+        <label for="title">Title?</label>
+        <input name="title" id="title" value="">
+    </div>
+    <div>
+        <label for="score">Score?</label>
+        <input name="score" id="score" value="">
+    </div>
+    <div>
+        <label for="director">Director?</label>
+        <input name="director" id="director" value="">
+    </div>
+    <div>
+        <button type="submit" class="addmovie">Send</button>
+    </div>
+</form>
+    
+</body></html>
